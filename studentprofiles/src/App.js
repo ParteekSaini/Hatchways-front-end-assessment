@@ -36,7 +36,7 @@ export default function App() {
 
   // Using useEffect to call the fetchData function
   useEffect(() => {
-    fetchData(`https://api.hatchways.io/assessment/students`);
+    fetchData(`https://app.hatchways.io/api/assessment/students`);
   }, []);
  
   // returning the input tags for search inputs at the top of page and using StudentCard to display student records
