@@ -27,14 +27,11 @@ export default function App() {
     
     // Using map function to store student records in newStudentProfiles array
     json.students.map(student => {
-      return newStudentProfiles.push(student);
-    });
-
-    // Calculating the average and adding to array
-    for(const student of newStudentProfiles){
+      // Calculating the average and adding to array
       const average = student.grades.reduce((sum,i)=> sum+Number(i),0)/student.grades.length;
       student.average = average;
-    }
+      return newStudentProfiles.push(student);
+    });
 
     // Settting the studentProfiles 
     setStudentProfiles(newStudentProfiles);
