@@ -1,5 +1,9 @@
 # Hatchways-front-end-assessment
 
+Deployment Link of this app on Heroku: https://hatchways-front-end-assessment.herokuapp.com/
+<br/>
+Project Demonstration and Code Explanation video: https://www.youtube.com/watch?v=xzA4rXLP5NU
+
 # Project Description <br/>
 1. Fetch Data from public JSON API, and present the information on the screen
 2. Replicate the style of the image and gif below as close as to ideal output. The font used in the image is Raleway
@@ -12,4 +16,4 @@
 9. If a name is entered in the search by name input, and a tag is entered in the search by tag input, results that include both the name and tag should be shown
 
 <br/>
-Deployment Link of this app on Heroku: https://hatchways-front-end-assessment.herokuapp.com/
+
