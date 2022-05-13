@@ -34,7 +34,7 @@ const searchByTag = (items,tagQuery)=>{
       }
     }
     // Now making the array with unique records by deleting duplicate records and returning it
-    var uniqueSearchResult = Array.from(new Set(searchResult));
+    const uniqueSearchResult = Array.from(new Set(searchResult));
     return uniqueSearchResult;
   }
 
@@ -77,9 +77,9 @@ const searchByName = (items,nameQuery)=>{
   function showGrades(e){
     
     // Getting the e and making the id of a particular record's icon and getting that icon in icon variable
-    var i = "icon"+e;
-    var grade = document.getElementById(e);
-    var icon = document.getElementById(i);
+    const i = "icon"+e;
+    const grade = document.getElementById(e);
+    const icon = document.getElementById(i);
     
     // using if and else to toggle the icon from + to - and showing and not showing grades div 
     if(grade.style.display==="block"){

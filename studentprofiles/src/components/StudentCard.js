@@ -7,7 +7,7 @@ https://www.linkedin.com/in/parteek-saini-95a122158/
 
 import React from 'react';
 import {  useState } from "react";
-import { addTag, showGrades } from "./FunctionHelper"
+import { addTag, showGrades } from "../Helper/FunctionHelper";
 
 function StudentCard({studentProfiles}){
     
@@ -41,7 +41,7 @@ function StudentCard({studentProfiles}){
                   <p>Skills: {item.skill}</p>
 
                   {/* Average - Using reduce function to display average */}
-                  <p>Average: {item.grades.reduce((sum,i)=> sum+Number(i),0)/item.grades.length}%</p>
+                  <p>Average: {item.average}%</p>
 
                   {/* Grades - Using map function to display all grades */}
                   <div style={{display:"none"}} id={item.id}>{item.grades.map((grade, count)=>
@@ -53,9 +53,8 @@ function StudentCard({studentProfiles}){
                   <form id={`tag_form${item.id}`} onSubmit={(e) => addTag(e, tag, item, setTag)}>
                     {/*  All Added tags displayed using map function */}
                     {item.tags && item.tags.length > 0
-                      ? item.tags.map((tag,i) => 
+                      && item.tags.map((tag,i) => 
                       {return <span key={`span${i}`}><span>{tag}</span>&nbsp; </span>})
-                      : ""
                     }
                     <br/>
 

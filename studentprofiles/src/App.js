@@ -8,7 +8,7 @@ https://www.linkedin.com/in/parteek-saini-95a122158/
 import './App.css';
 import React, {useEffect, useState } from 'react';
 import {StudentCard} from './components/StudentCard';
-import { searchByTag, searchByName } from "./components/FunctionHelper";
+import { searchByTag, searchByName } from "./Helper/FunctionHelper";
 
 require("es6-promise").polyfill();
 require("isomorphic-fetch");
@@ -29,6 +29,12 @@ export default function App() {
     json.students.map(student => {
       return newStudentProfiles.push(student);
     });
+
+    // Calculating the average and adding to array
+    for(const student of newStudentProfiles){
+      const average = student.grades.reduce((sum,i)=> sum+Number(i),0)/student.grades.length;
+      student.average = average;
+    }
 
     // Settting the studentProfiles 
     setStudentProfiles(newStudentProfiles);
