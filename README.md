@@ -1,6 +1,6 @@
 # Hatchways-front-end-assessment
 
-Deployment Link of this app on Heroku: https://hatchways-front-end-assessment.herokuapp.com/
+Deployment Link of this app on Firebase: https://hatchways-65af2.web.app
 <br/>
 Project Demonstration and Code Explanation video: https://www.youtube.com/watch?v=xzA4rXLP5NU
 
